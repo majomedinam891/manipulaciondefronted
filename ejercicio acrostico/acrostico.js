@@ -1,9 +1,13 @@
 let palabraInput = document.getElementById("palabraInput")
-let crearBtn = document.getElementById("crearBtn")
-let contenedorAcrostic = document.getElementById("contenedorAcrostico")
-let finalizarbBtn = document.getElementById("finalizarBtn")
-let resultadoDiv = document.getElementById("resultado")
+let botonCrear = document.getElementById("botonCrear")
+let resultado = document.getElementById("resultado")
 
-crearBtn.addEventListener("click", () => { 
-    let palabra = palabraInput.Value.toUpperCase();
+botonCrear.addEventListener("click", (e) =>{
+    let palabra = palabraInput.value
+    for (let i = 0; i < palabra.length; i++) {
+        resultado.innerHTML += `<p>${palabra[i]} <input id="caja${i}" /></p>`
+    }
+    resultado.innerHTML += "<button id='finalizar'>Finalizar</button>"
+    // resultado.innerHTML += 
 })
+
